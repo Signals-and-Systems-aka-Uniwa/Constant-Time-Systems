@@ -8,6 +8,11 @@
   DEPARTMENT OF COMPUTER ENGINEERING AND INFORMATICS
 </p>
 
+<p align="center">
+  <a href="https://www.uniwa.gr" target="_blank">University of West Attica</a> ·
+  <a href="https://ice.uniwa.gr" target="_blank">Department of Computer Engineering and Informatics</a>
+</p>
+
 ---
 
 <p align="center">
@@ -28,6 +33,12 @@
   <a href="https://www.linkedin.com/in/vasilis-athanasiou-7036b53a4/" target="_blank">LinkedIn</a>
 </p>
 
+<hr>
+
+<p align="center">
+  <strong>Supervision</strong>
+</p>
+
 <p align="center">
   Supervisor: Adonis Bogris, Professor<br>
 </p>
@@ -44,17 +55,27 @@
   <a href="https://ice.uniwa.gr/en/emd_person/georgios-antoniou/" target="_blank">UNIWA Profile</a>
 </p>
 
+</hr>
+
+---
+
 <p align="center">
   Athens, April 2021
 </p>
 
 ---
 
-# Signals and Systems — Task 3: Constant Time Systems
+<p align="center">
+  <img src="https://www.researchgate.net/publication/251999296/figure/fig1/AS:347436133437440@1459846637128/Time-constant-of-first-order-system.png" width="250"/>
+</p>
 
-## Project Overview
+---
 
-This project was completed for the **Signals and Systems Laboratory** and focuses on the analysis and simulation of **constant-time systems** using MATLAB.  
+# README
+
+## Constant Time Systems
+
+This project was completed for the **Signals and Systems Laboratory** and focuses on the analysis and simulation of **constant-time systems** using MATLAB.
 
 The repository includes documentation and MATLAB code for exercises examining **system stability** and **system causality**.
 
@@ -62,23 +83,25 @@ The repository includes documentation and MATLAB code for exercises examining **
 
 ## Table of Contents
 
-| Section | Folder/File | Description |
-|------:|-------------|-------------|
-| 1 | `assign/` | Assignment instructions and exercise description |
-| 1.1 | `assign/EXERCISE 3 - CONSTANT TIME SYSTEMS.pdf` | Exercise instructions (English) |
-| 1.2 | `assign/ΑΣΚΗΣΗ 3 - ΣΥΣΤΗΜΑΤΑ ΣΥΝΕΧΟΥΣ ΧΡΟΝΟΥ.pdf` | Exercise instructions (Greek) |
-| 2 | `docs/` | Documentation related to constant time systems exercises |
-| 2.1 | `docs/Constant-Time-Systems.pdf` | Constant time systems documentation (English) |
-| 2.2 | `docs/Συστήματα-Συνεχούς-Χρόνου.pdf` | Constant time systems documentation (Greek) |
-| 3 | `src/` | MATLAB source code files for constant time systems exercises |
-| 3.1 | `src/c1.m` | MATLAB script file |
-| 3.2 | `src/c2.m` | MATLAB script file |
-| 4 | `README.md` | Repository overview and usage instructions |
+| Section | Folder/File                                       | Description                                                  |
+| ------: | ------------------------------------------------- | ------------------------------------------------------------ |
+|       1 | `assign/`                                         | Assignment instructions and exercise description             |
+|     1.1 | `assign/EXERCISE 3 - CONSTANT TIME SYSTEMS.pdf`   | Exercise instructions (English)                              |
+|     1.2 | `assign/ΑΣΚΗΣΗ 3 - ΣΥΣΤΗΜΑΤΑ ΣΥΝΕΧΟΥΣ ΧΡΟΝΟΥ.pdf` | Exercise instructions (Greek)                                |
+|       2 | `docs/`                                           | Documentation related to constant time systems exercises     |
+|     2.1 | `docs/Constant-Time-Systems.pdf`                  | Constant time systems documentation (English)                |
+|     2.2 | `docs/Συστήματα-Συνεχούς-Χρόνου.pdf`              | Constant time systems documentation (Greek)                  |
+|       3 | `src/`                                            | MATLAB source code files for constant time systems exercises |
+|     3.1 | `src/c1.m`                                        | MATLAB script file                                           |
+|     3.2 | `src/c2.m`                                        | MATLAB script file                                           |
+|       4 | `README.md`                                       | Project documentation                                        |
+|       5 | `INSTALL.md`                                      | Usage instructions                                           |
+
 ---
 
-## Exercises Summary
+## 1. Exercises Summary
 
-### Exercise 2 — System Stability
+### 1.1 Exercise 2 — System Stability
 
 This exercise evaluates the stability of a system defined by the relation:
 
@@ -93,12 +116,14 @@ x(t) = \cos(2\pi t)
 $$
 
 **Analysis**
-- The input signal is bounded since 
 
-$$ 
-|x(t)| \le 1 
+- The input signal is bounded since
+
 $$
-- The resulting output signal remains bounded, satisfying 
+|x(t)| \le 1
+$$
+
+- The resulting output signal remains bounded, satisfying
 
 $$
 |y(t)| \le N
@@ -112,7 +137,7 @@ Since a **bounded input produces a bounded output (BIBO condition)**, the system
 
 ---
 
-### Exercise 3 — System Causality
+## 2. Exercise 3 — System Causality
 
 This exercise studies system causality through time scaling.
 
@@ -129,6 +154,7 @@ y(t) = x(t/4)
 $$
 
 **Analysis**
+
 - The output appears compressed or shifted relative to the input.
 - The system output at time `t` depends on future input values.
 
@@ -138,13 +164,13 @@ The system is **non-causal**, since output depends on future input values.
 
 ---
 
-## MATLAB Implementation
+## 3. MATLAB Implementation
 
 The implementation uses MATLAB tools for signal construction and visualization.
 
 **Key commands used**
 
-- **Time vectors:** Created using the colon operator  
+- **Time vectors:** Created using the colon operator
   ```matlab
   t = 0:0.1:10;
   ```
@@ -162,109 +188,6 @@ These commands allow comparative visualization and analysis of system behavior.
 
 ---
 
-## Summary
+## 4. Summary
 
 This laboratory task demonstrates the evaluation of system properties such as stability and causality, reinforcing theoretical concepts through MATLAB-based simulation and visualization.
-
----
-
-# Installation & Setup Guide  
-
-This guide explains how to install requirements and run the MATLAB exercises contained in this repository.
-
----
-
-## 1. Prerequisites
-
-To run the project, you need:
-
-- MATLAB installed on your system  
-  (Any recent version should work; recommended R2020 or newer)
-- Basic familiarity with MATLAB scripts and workspace execution
-
-Optional:
-- Git (to clone the repository)
-
----
-
-## 2. Obtain the Project
-
-### Option A — Clone Repository (Recommended)
-Open a terminal or command prompt and run:
-
-```bash
-git clone https://github.com/Signals-and-Systems-aka-Uniwa/Constant-Time-Systems.git
-```
-
-### Option B — Download ZIP
-1. Open the repository page in your browser.
-2. Click Code → Download ZIP.
-3. Extract the archive to a folder on your computer.
-
-## 3. Open Project in MATLAB
-1. Start MATLAB.
-2. Click Home → Set Path → Add Folder or:
-    - Use Set Current Folder in MATLAB.
-3. Navigate to the repository folder.
-4. Open the `src/` directory.
-
-Recommended folder:
-```bash
-Constant-Time-Systems/src/
-```
-
-## 4. Running the Scripts
-Each exercise is implemented as MATLAB scripts.
-From MATLAB:
-
-### Method 1 — Double Click
-Double-click any script:
-```bash
-c1.m
-c2.m
-```
-
-and press Run.
-
-### Method 2 — Command Window
-Run scripts directly:
-```bash
-c1
-c2
-```
-
-## 5. Required MATLAB Functions
-Scripts rely on standard MATLAB functions such as:
-- `cos`
-- `zeros`, `ones`
-- `plot`
-- `subplot`
-- `title`
-- `ylim`
-
-No external toolboxes are typically required beyond standard MATLAB functionality.
-
-## 6. Expected Output
-Running scripts will generate:
-- Signal visualizations
-- Stability analysis plots
-- Causality demonstrations
-- Comparative signal figures
-
-Plots appear automatically in MATLAB figure windows.
-
-## 7. Common Issues & Fixes
-### Script Not Found
-Ensure MATLAB current folder is:
-```bash
-Constant-Time-Systems/src/
-```
-
-### Function Undefined Error
-Add folder to MATLAB path:
-```bash
-addpath(genpath(pwd))
-```
-
-### Plot Not Displayed
-Ensure script execution completed without errors and figure windows are not hidden.
